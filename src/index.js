@@ -10,6 +10,8 @@ import Login from './components/login';
 import Register from './components/register';
 import Forgotpassword from './components/forgotpassword';
 
+import Admin from './admin'
+
 class App extends Component {
   constructor() {
     super();
@@ -33,6 +35,7 @@ class App extends Component {
             <Route path="/" exact component={Login}/>
             <Route path="/register" component={Register}/>
             <Route path="/forgotPassword" component={Forgotpassword}/>
+            <Route path="/admin" exact component={Admin}/>
           </Switch>
         </Router>
       </div>
