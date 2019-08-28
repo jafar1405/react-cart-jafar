@@ -38,6 +38,8 @@ class App extends Component {
             <Route path="/admin" exact component={Admin}/>
           </Switch>
         </Router>
+
+        <h1>Welcome to Site!</h1>
       </div>
     );
   }

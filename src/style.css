@@ -11,4 +11,5 @@ h1, p {
 nav{
   position: absolute;
   z-index: 10;
+  right: 0;
 }

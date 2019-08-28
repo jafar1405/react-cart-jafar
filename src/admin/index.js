@@ -104,11 +104,16 @@ function Admin() {
   const [data, setData] = useState(React.useMemo(() => [{id:'',firstname:'',lastname:'',username:'',password:''}]))
 
     useEffect(()=>{
+      let isSubscribed = true;
       Axios.get('https://json-server-jafar.herokuapp.com/user')
       .then(res=>{
+        if(isSubscribed){
           setData(res.data)
-      },[])
-  })
+        }          
+      })
+
+      return () => isSubscribed = false
+  },[])
    
 
   return (

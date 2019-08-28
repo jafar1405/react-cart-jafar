@@ -22,7 +22,9 @@ const Register = ()=>{
 
   const handleSubmit = (e)=>{
     e.preventDefault()
-    axios.post(`https://json-server-jafar.herokuapp.com/user`,{
+    axios.post(
+      `https://json-server-jafar.herokuapp.com/user`,
+      {
       ...state
     }).then(response=>{
       console.log(response)
